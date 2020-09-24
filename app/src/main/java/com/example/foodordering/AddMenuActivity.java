@@ -63,23 +63,7 @@ public class AddMenuActivity extends AppCompatActivity {
                 map.put("nonVeg", false);
                 map.put("photoUrl", "");
 
-//                FirebaseUser user = auth.getCurrentUser();
-//                assert user != null;
-//                final String rid = user.getUid();
-//                reference1.child(rid).addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        HashMap<String, Object> hashMap = (HashMap<String, Object>) dataSnapshot.getValue();
-//                        int item_count = (int) hashMap.get("item_count");
-//                        reference1.child(rid).child("item_count").setValue(item_count+1);
-//                        reference2.child(rid).child(Integer.toString(item_count)).setValue(id);
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
+
                 reference.child(id).updateChildren(map);
                 startActivity(new Intent(AddMenuActivity.this,SetMenuActivity.class));
 
