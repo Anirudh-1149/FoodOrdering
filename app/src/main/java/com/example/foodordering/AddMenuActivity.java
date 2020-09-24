@@ -42,7 +42,7 @@ public class AddMenuActivity extends AppCompatActivity {
         price  = findViewById(R.id.price);
         add = findViewById(R.id.add_item);
         auth = FirebaseAuth.getInstance();
-
+        //just adding a new comment
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
